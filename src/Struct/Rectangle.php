@@ -31,7 +31,7 @@ class Rectangle extends Point
     /**
      * @return int
      */
-    public function getWidth()
+    public function getWidth(): int
     {
         return $this->width;
     }
@@ -39,7 +39,7 @@ class Rectangle extends Point
     /**
      * @return int
      */
-    public function getHeight()
+    public function getHeight(): int
     {
         return $this->height;
     }
@@ -47,7 +47,7 @@ class Rectangle extends Point
     /**
      * @return int
      */
-    public function getLeft()
+    public function getLeft(): int
     {
         return $this->getX();
     }
@@ -55,7 +55,7 @@ class Rectangle extends Point
     /**
      * @return int
      */
-    public function getTop()
+    public function getTop(): int
     {
         return $this->getY();
     }
@@ -63,7 +63,7 @@ class Rectangle extends Point
     /**
      * @return int
      */
-    public function getRight()
+    public function getRight(): int
     {
         return $this->getX() + $this->width;
     }
@@ -71,7 +71,7 @@ class Rectangle extends Point
     /**
      * @return int
      */
-    public function getBottom()
+    public function getBottom(): int
     {
         return $this->getY() + $this->height;
     }

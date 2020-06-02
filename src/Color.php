@@ -47,7 +47,7 @@ class Color
      * @return Color
      * @todo Add parsing of CSS-like strings: rgb(), rgba(), hsl()
      */
-    public static function parseString($str)
+    public static function parseString($str): Color
     {
         $str = str_replace('#', '', $str);
         if (strlen($str) == 6) {
@@ -71,7 +71,7 @@ class Color
      * @param float $l Light
      * @return Color
      */
-    public static function fromHsl($h, $s, $l)
+    public static function fromHsl($h, $s, $l): Color
     {
         $fromFloat = function (array $rgb) {
             foreach ($rgb as &$v) {
@@ -110,7 +110,7 @@ class Color
      * @return int Returns the index of the specified color+alpha in the palette of the image,
      *             or index of allocated color if the color does not exist in the image's palette.
      */
-    public function getIndex($image)
+    public function getIndex($image): int
     {
         $index = $this->hasAlphaChannel()
             ? imagecolorexactalpha(
@@ -132,7 +132,7 @@ class Color
     /**
      * @return bool TRUE when alpha channel is specified, FALSE otherwise
      */
-    public function hasAlphaChannel()
+    public function hasAlphaChannel(): bool
     {
         return $this->alpha !== null;
     }
@@ -142,6 +142,6 @@ class Color
      */
     public function toArray()
     {
-        return array($this->red, $this->green, $this->blue);
+        return [$this->red, $this->green, $this->blue];
     }
 }

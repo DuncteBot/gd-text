@@ -28,7 +28,7 @@ class Point
     /**
      * @return int
      */
-    public function getX()
+    public function getX(): int
     {
         return $this->x;
     }
@@ -36,7 +36,7 @@ class Point
     /**
      * @return int
      */
-    public function getY()
+    public function getY(): int
     {
         return $this->y;
     }
